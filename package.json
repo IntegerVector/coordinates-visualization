@@ -1,0 +1,31 @@
+{
+  "name": "coordinates-visualization",
+  "version": "1.0.0",
+  "description": "visualization of prime numbers radian coordinates",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack",
+    "build": "webpack --mode production",
+    "start": "webpack server --mode development --open --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IntegerVector/coordinates-visualization.git"
+  },
+  "author": "IntegerVector",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IntegerVector/coordinates-visualization/issues"
+  },
+  "homepage": "https://github.com/IntegerVector/coordinates-visualization#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
