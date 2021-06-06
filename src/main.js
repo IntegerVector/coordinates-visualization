@@ -1,7 +1,10 @@
 import { Board } from './board.js';
 
-const dotsCount = prompt('Specify amount of dots: ', 1000000);
-const board = new Board('main', 0.05);
+const CANVAS_ELEMENT = 'main';
+
+const scaleFactor = prompt('Specify scale factor: ', 0.1);
+const dotsCount = prompt('Specify amount of dots: ', 100000);
+const board = new Board(CANVAS_ELEMENT, scaleFactor);
 
 board.filter(isPrime);
 board.draw(10000, 10000, dotsCount);
