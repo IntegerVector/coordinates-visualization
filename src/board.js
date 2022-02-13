@@ -1,23 +1,23 @@
 export class Board {
-  constructor(canvasId, scale = 1) {
+  constructor(canvasId) {
     this._canvas = document.getElementById(canvasId);
-    this._scale = scale;
   };
 
   filter(callBack) {
     this._filter = callBack;
   }
 
-  draw(width, height, dotsCount) {
+  draw({width, height, count, scale}) {
     this._width = width;
     this._height = height;
+    this._scale = scale;
     this._canvas.width = width;
     this._canvas.height = height;
     this._centerX = width / 2;
     this._centerY = height / 2
 
     this._drawBackground();
-    this._drawDots(dotsCount);
+    this._drawDots(count);
   }
 
   _getContext() {
