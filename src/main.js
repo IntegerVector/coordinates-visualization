@@ -1,4 +1,5 @@
 import { Board } from './board.js';
+import { isPrime } from './is-prime.js';
 
 const CANVAS_ELEMENT_ID = 'main';
 const CANVAS_WIDTH = 10000;
@@ -18,13 +19,3 @@ const board = new Board(CANVAS_ELEMENT_ID);
 
 board.filter(isPrime);
 board.draw(drawParams);
-
-function isPrime(number) {
-  if(number == 2) return true;
-  if(number < 2 || number % 2 == 0) return false;
-
-  for(let i = 3; i*i <= number; i += 2)
-    if(number % i == 0) return false;
-
-  return true;
-}
